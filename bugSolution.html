@@ -1,0 +1,21 @@
+The corrected code ensures that `my-custom-class` is defined in your Tailwind configuration (usually `tailwind.config.js`) or that the class name is correctly spelled.
+
+```html
+<div class="bg-red-500 my-custom-class"></div>
+```
+
+**tailwind.config.js (Example):**
+
+```javascript
+module.exports = {
+  theme: {
+    extend: {
+      textColor: {
+        'my-custom-class': '#f00',
+      }
+    }
+  }
+}
+```
+
+In this solution, we directly use the class `my-custom-class` (assuming it is defined correctly in your Tailwind config), removing the `@apply` directive which was causing issues due to the misspelling or absence of the class definition. Using `@apply` is still possible if `my-custom-class` is correctly defined in the config file.
